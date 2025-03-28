@@ -144,8 +144,7 @@ def algoritmo_genetico():
         print("Padre 2: ", padre2)
         print("Hijo 1: ", hijo1)
         print("Hijo 2: ", hijo2)
-        print("-------Población Generación ",generacion+1, "--------")
-        for i in range(n_poblacion.get()):
+        for i in range(len(poblacion)):
             print(poblacion[i])
         print("\n")
     #--------------------------------------------------------------------------------
@@ -189,7 +188,7 @@ def GenerarInforme(cromosoma, portafolio):
     ttk.Label(Result_frame, text="Sr/ Sra " + nombre.get() + ", a continuación se presenta tu Portafolio:", background='#c6c6c6').grid(column=0, row=0, columnspan=5, sticky=W, pady=(0, 0))
     
     ttk.Label(Result_frame, text="Perfil:", background='#c6c6c6').grid(column=0, row=1, sticky=W, pady=(10, 10))
-    ttk.Label(Result_frame, textvariable=d_perfil, background='#c6c6c6').grid(column=1, row=1, columnspan=3, sticky=W, pady=(10, 10))
+    ttk.Label(Result_frame, textvariable=d_perfil, background='#c6c6c6').grid(column=1, row=1, columnspan=5, sticky=W, pady=(10, 10))
     
     ttk.Label(Result_frame, text="El mejor cromosoma: ", background='#c6c6c6').grid(column=0, row=2, sticky=W, pady=(0, 10))
     ttk.Label(Result_frame, textvariable=m_cromosoma, background='#c6c6c6').grid(column=1, row=2, columnspan=3, sticky=W, pady=(0, 10))
